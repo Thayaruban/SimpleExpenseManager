@@ -34,8 +34,8 @@ public class PersistentTransactionDAO implements TransactionDAO {
 
 
 
-            String query = "INSERT INTO Account_Transaction (accountNo,expenseType,amount,date) VALUES (?,?,?,?)";
-            SQLiteStatement statement = Db.compileStatement(query);
+            String query1 = "INSERT INTO Account_Transaction (accountNo,expenseType,amount,date) VALUES (?,?,?,?)";
+            SQLiteStatement statement = Db.compileStatement(query1);
 
             statement.bindString(1,accountNo);
             statement.bindLong(2,(expenseType_ == ExpenseType.EXPENSE) ? 0 : 1);

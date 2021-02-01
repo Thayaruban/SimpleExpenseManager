@@ -28,10 +28,10 @@ public class PersistentAccountDAO implements AccountDAO {
     public List<String> getAccountNumbersList() {
         List<String> accountNums = new ArrayList<>();
 
-        String ALL_ACCOUNT_NUMBERS = "SELECT accountNo FROM Account";
+        String ALL_ACCOUNT_NUMS = "SELECT accountNo FROM Account";
 
 
-        Cursor cursor = Db.rawQuery(ALL_ACCOUNT_NUMBERS, null);
+        Cursor cursor = Db.rawQuery(ALL_ACCOUNT_NUMS, null);
         try {
             if (cursor.moveToFirst()) {
                 do {
